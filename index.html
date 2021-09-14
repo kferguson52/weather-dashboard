@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8" />
+  <title>Your page title here :)</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/skeleton.css" />
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- .container is main centered wrapper -->
+  <div class="container">
+    <!-- columns should be the immediate child of a .row -->
+    <div class="row">
+      <div id="weather" class="twelve column">Weather Dashboard</div>
+    </div>
+
+    <!-- just use a number and class 'column' or 'columns' -->
+    <div class="row">
+      <div id="city" class="four columns">
+        Search for a City<input type="button" value="button input" />
+      </div>
+      <div id="atlanta" class="eight columns">
+        <ul>
+          <li>Atlanta (09/14/21)</li>
+          <ul>
+            <li>Temp</li>
+            <li>Wind</li>
+            <li>Humidity</li>
+            <li>UV Index</li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="four columns">
+        Returned List of Cities
+      </div>
+      <div class="eight columns">5 Day Forecast
+        <div class="row">
+          <div class="two columns">
+            Test
+          </div>
+          <div class="two columns">
+            Test
+          </div>
+          <div class="two columns">
+            Test
+          </div>
+          <div class="two columns">
+            Test
+          </div>
+          <div class="two columns">
+            Test
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
+  </div>
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
