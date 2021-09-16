@@ -22,6 +22,13 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/skeleton.css" />
 
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
@@ -34,56 +41,38 @@
   <!-- .container is main centered wrapper -->
   <div class="container">
     <!-- columns should be the immediate child of a .row -->
-    <div class="row">
-      <div id="weather" class="twelve column">Weather Dashboard</div>
-    </div>
+    <!-- <div class="row">
+        <div id="weather" class="twelve column">Weather Dashboard</div>
+      </div> -->
 
     <!-- just use a number and class 'column' or 'columns' -->
     <div class="row">
-      <div id="city" class="four columns">
-        Search for a City<input type="button" value="button input" />
-      </div>
-      <div id="atlanta" class="eight columns">
-        <ul>
-          <li>Atlanta (09/14/21)</li>
-          <ul>
-            <li>Temp</li>
-            <li>Wind</li>
-            <li>Humidity</li>
-            <li>UV Index</li>
-          </ul>
-        </ul>
-      </div>
-    </div>
+      <div class="col s3">
+        <div class="input-field col s12">
+          <input placeholder="Atlanta" id="city" type="text" class="validate" />
+          <label class="active" for="first_name2">Search for a city</label>
+          <a class="waves-effect waves-light btn" id="searchBtn">Search</a>
+        </div>
 
-    <div class="row">
-      <div class="four columns">
-        Returned List of Cities
-      </div>
-      <div class="eight columns">5 Day Forecast
-        <div class="row">
-          <div class="two columns">
-            Test
-          </div>
-          <div class="two columns">
-            Test
-          </div>
-          <div class="two columns">
-            Test
-          </div>
-          <div class="two columns">
-            Test
-          </div>
-          <div class="two columns">
-            Test
-          </div>
+
+
+        <div class="history">
+
         </div>
       </div>
-    </div>
 
+      <div class="col s9">
+        <section id="current"></section>
+        <section id="forecast" class="row">
+          <h3 class="col s12">5 Day Forecast</h3>
+        </section>
+      </div>
+    </div>
     <!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
-  </div>
-  <!-- End Document
+    <!-- add script at the bottom of the body -->
+    <script src="./assets/js/homepage.js"></script>
+
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 

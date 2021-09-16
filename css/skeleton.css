@@ -417,7 +417,7 @@ there.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 
-#weather{
+/* #weather{
   text-align: center;
   background-color: royalblue;
   font-size: larger;
@@ -433,5 +433,9 @@ there.
 
 #city{
   margin-top: 10px;
+  background-color: red;
+} */
+
+#current{
   background-color: red;
 }
