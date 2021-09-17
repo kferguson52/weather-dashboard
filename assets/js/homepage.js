@@ -30,7 +30,7 @@ function oneCall(data) {
     .then((res) => res.json())
     .then((data) => {
       renderCurrentWeather(data.current, cityName);
-      //renderForecast(data.daily)
+      renderForecast(data.daily);
     });
 }
 
@@ -45,17 +45,6 @@ function renderCurrentWeather(current, city) {
   var dateMilSec = dateUnix * 1000;
   var dateObject = new Date(dateMilSec);
   var dateString = dateObject.toLocaleString();
-  console.log(current);
-  console.log(temp);
-  console.log(wind);
-  console.log(humid);
-  console.log(uvi);
-  console.log(dateUnix);
-  console.log(dateMilSec);
-  console.log(dateObject);
-  console.log(dateString);
-  console.log(cityName);
-
   var pDate = document.createElement("h5");
   pDate.textContent = "Today's Date: " + dateString;
   document.getElementById("current").appendChild(pDate);
@@ -71,11 +60,33 @@ function renderCurrentWeather(current, city) {
   var pHum = document.createElement("h5");
   pHum.textContent = "Humidity: " + humid;
   document.getElementById("current").appendChild(pHum);
-
- 
   //create elements that we need to displau
   //set textContext in those elements
   //append all created elements in the appropriate container.
+}
+
+function renderForecast(days) {
+  for (var i = 1; i < days.length; i++) {
+    var h5DateTimeEl = document.createElement("h5");
+    var h5DateTimeVal = days[i].dt * 1000;
+    var dateObject2 = new Date(h5DateTimeVal);
+    var dateString2 = dateObject2.toLocaleString();
+    var forTemp = days[i].temp.day;
+    console.log(forTemp);
+    var forWind = days[i].wind_speed;
+    var forHumid = days[i].humidity;
+    h5DateTimeEl.textContent = "Date: " + dateString2;
+    document.getElementById("5-day").appendChild(h5DateTimeEl);
+    var hTemp = document.createElement("h5");
+    hTemp.textContent = "Temperature: " + forTemp;
+    document.getElementById("5-day").appendChild(hTemp);
+    var hWind = document.createElement("h5");
+    hWind.textContent = "Wind Speed(mph): " + forWind;
+    document.getElementById("5-day").appendChild(hWind);
+    var hHumid = document.createElement("h5");
+    hHumid.textContent = forHumid;
+    document.getElementById("5-day").appendChild(hTemp);
+  }
 }
 
 // After getting the lat and long values from the geo API store in variable, we are gonna use these values to call the One Call Api
