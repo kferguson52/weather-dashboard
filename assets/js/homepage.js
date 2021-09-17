@@ -77,15 +77,19 @@ function renderForecast(days) {
     var forHumid = days[i].humidity;
     h5DateTimeEl.textContent = "Date: " + dateString2;
     document.getElementById("5-day").appendChild(h5DateTimeEl);
+    localStorage.setItem("date", h5DateTimeEl.innerHTML);
     var hTemp = document.createElement("h5");
     hTemp.textContent = "Temperature: " + forTemp;
     document.getElementById("5-day").appendChild(hTemp);
+    localStorage.setItem("temp", hTemp.innerHTML);
     var hWind = document.createElement("h5");
     hWind.textContent = "Wind Speed(mph): " + forWind;
     document.getElementById("5-day").appendChild(hWind);
+    var hwStore = localStorage.setItem("wind", hWind.innerHTML);
     var hHumid = document.createElement("h5");
     hHumid.textContent = forHumid;
     document.getElementById("5-day").appendChild(hTemp);
+    var htStore = localStorage.setItem("humid", hHumid.innerHTML);
   }
 }
 
